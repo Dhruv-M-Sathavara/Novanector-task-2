@@ -724,19 +724,111 @@ class _HomepageState extends State<Homepage> {
                      
                     ],
                   ),
-                  
-                  
-
                   ),
 
+                SizedBox(height: 30,),
+
+              Container(
+                child: RichText(text: TextSpan(
+                  style: TextStyle(color: Colors.black),
+                  children: [
+                    TextSpan(
+                      text: "Start your " ,style: TextStyle(
+                        fontSize: 30
+                      ),
+                    
+                    ),
+
+                    TextSpan(text:'project ' ,style: TextStyle(
+                      fontSize: 30,color: Colors.blue, decoration: TextDecoration.underline
+                    ) ),
+
+                    TextSpan(text: "Today!" ,style: TextStyle(
+                      fontSize: 30
+                    )),
+                  ],
+                )
+                ), 
+                ),
+                SizedBox(height: 20,),
+                    
+
+              Container(
+                height: 180,
+                padding: EdgeInsets.all(10),
+                margin: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.2),
+                      blurRadius: 10,
+                      spreadRadius: 2,
+                      offset: Offset(0, 5),
+                    ),
+                  ],
+                ),
+                child: Column(
                   
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  
+                  children: [
+                    Padding(padding: EdgeInsets.all(10)),
+                    Text(
+                      'CONTACT',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Row(
+                      children: [
+                        Icon(Icons.email, color: Colors.black),
+                        SizedBox(width: 10),
+                        Text('info@novanectar.co.in',
+                            style: TextStyle(fontSize: 16)),
+                      ],
+                    ),
+                    SizedBox(height: 10),
+                    Row(
+                      children: [
+                        Icon(Icons.phone, color: Colors.black),
+                        SizedBox(width: 10),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('+91 8979891703', style: TextStyle(fontSize: 16)),
+                            Text('+91 8979891705', style: TextStyle(fontSize: 16)),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
 
+              Container(
+
+                width: double.infinity,
+                color:const Color.fromARGB(255, 8, 5, 39),
+
+                child: Column(
+                  children: [
+                    Padding(padding: EdgeInsets.symmetric(vertical: 40)),
+                    Text("NOVANECTAR", style: TextStyle(fontSize: 30, decoration: TextDecoration.underline,decorationColor: Colors.white ,color: Colors.white),),
+                    Text("IT Services & IT Counsulting" , style: TextStyle(fontSize: 20, color:Colors.grey ),),
+                    
                     SizedBox(height: 30,),
-                    Text("Why Choose US?", style: TextStyle(color:   Colors.black,fontSize: 20),),
-              
-                
-              
-
+                    Text("Visit US",style: TextStyle(color: Colors.white),),
+                    Text("GMS Road Dehradun, Kamla Palace Chowk",style: TextStyle(color: Colors.white),),
+                    Text("Uttrakhand, India",style: TextStyle(color: Colors.white),),
+                    SizedBox(height: 30,),
+                    Text("@ ALL Rights Reserved 2025. Novanectar",style: TextStyle(color: Colors.white),)
+                  ],
+                ),
+              )
           ],
           ),
         ),
