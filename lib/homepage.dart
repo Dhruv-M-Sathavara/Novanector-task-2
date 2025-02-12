@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:task2/pages/appdevelopment.dart';
+import 'package:task2/pages/digitalmarketing.dart';
+import 'package:task2/pages/ecommerce.dart';
+import 'package:task2/pages/graphic.dart';
+import 'package:task2/pages/seo.dart';
+import 'package:task2/pages/webdevelopment.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -247,377 +253,409 @@ class _HomepageState extends State<Homepage> {
                       children: [
                         Text('Services',style: TextStyle(fontSize: 30 ,decoration: TextDecoration.underline),), 
                         SizedBox(height: 50,),
-                        Container(
-                        width: 500,
-                        
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(16),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 6,
-                              spreadRadius: 2,
-                              offset: Offset(0, 4),
-                            ),
-                          ],
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
-                               child: Image.network('https://novanectar.co.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FgraphicDesign.5bf1439e.png&w=1080&q=75',
-                                height: 200,
-                                width: 500,
-                                fit: BoxFit.cover,
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>
+                              Graphic()
+                            ));
+                          },
+                          child: Container(
+                          width: 500,
+                          
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(16),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 6,
+                                spreadRadius: 2,
+                                offset: Offset(0, 4),
                               ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
-                              child: Column(
-                                children: [
-                                  CircleAvatar(
-                                    backgroundColor: Colors.blue[100],
-                                    radius: 24,
-                                    child: Icon(Icons.design_services, size: 28, color: Colors.blue),
-                                  ),
-                                  SizedBox(height: 12),
-                                  Text(
-                                    "Graphic Design",
-                                    style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black87,
-                                    ),
-                                  ),
-                                  SizedBox(height: 8),
-                                  Text(
-                                    "Create visually stunning designs tailored to your brand, ensuring a professional and creative edge in every project.",
-                                  
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      color: Colors.black54,
-                                    ),
-                                  ),
-                                ],
+                            ],
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+                                 child: Image.network('https://novanectar.co.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FgraphicDesign.5bf1439e.png&w=1080&q=75',
+                                  height: 200,
+                                  width: 500,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                            ),
-                          ],
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+                                child: Column(
+                                  children: [
+                                    CircleAvatar(
+                                      backgroundColor: Colors.blue[100],
+                                      radius: 24,
+                                      child: Icon(Icons.design_services, size: 28, color: Colors.blue),
+                                    ),
+                                    SizedBox(height: 12),
+                                    Text(
+                                      "Graphic Design",
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black87,
+                                      ),
+                                    ),
+                                    SizedBox(height: 8),
+                                    Text(
+                                      "Create visually stunning designs tailored to your brand, ensuring a professional and creative edge in every project.",
+                                    
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        color: Colors.black54,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                                                ),
                         ),
-                      ),
 
 
                       SizedBox(height: 30,),
 
-                      Container(
-                        width: 500,
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Appdevelopment()));
+                        },
+                        child: Container(
+                          width: 500,
+                          
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(16),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 6,
+                                spreadRadius: 2,
+                                offset: Offset(0, 4),
+                              ),
+                            ],
+                          ),
                         
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(16),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 6,
-                              spreadRadius: 2,
-                              offset: Offset(0, 4),
-                            ),
-                          ],
-                        ),
-
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
-                               child: Image.network('https://novanectar.co.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FmobileDev.9a35e416.png&w=1080&q=75',
-                                height: 200,
-                                width: 500,
-                                fit: BoxFit.cover,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+                                 child: Image.network('https://novanectar.co.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FmobileDev.9a35e416.png&w=1080&q=75',
+                                  height: 200,
+                                  width: 500,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
-                              child: Column(
-                                children: [
-                                  CircleAvatar(
-                                    backgroundColor: Colors.blue[100],
-                                    radius: 24,
-                                    child: Icon(Icons.smartphone, size: 28, color: Colors.blue),
-                                  ),
-                                  SizedBox(height: 12),
-                                  Text(
-                                    "App Development",
-                                    style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black87,
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+                                child: Column(
+                                  children: [
+                                    CircleAvatar(
+                                      backgroundColor: Colors.blue[100],
+                                      radius: 24,
+                                      child: Icon(Icons.smartphone, size: 28, color: Colors.blue),
                                     ),
-                                  ),
-                                  SizedBox(height: 8),
-                                  Text(
-                                    "Build innovation and user-friendly mobile application to meet your business needs and enhance customer engagement.",
-                                  
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      color: Colors.black54,
+                                    SizedBox(height: 12),
+                                    Text(
+                                      "App Development",
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black87,
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                    SizedBox(height: 8),
+                                    Text(
+                                      "Build innovation and user-friendly mobile application to meet your business needs and enhance customer engagement.",
+                                    
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        color: Colors.black54,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
-                      ),
-
-                      SizedBox(height: 30,),
-
-                      Container(
-                        width: 500,
-                        
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(16),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 6,
-                              spreadRadius: 2,
-                              offset: Offset(0, 4),
-                            ),
-                          ],
-                        ),
-
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
-                               child: Image.network('https://novanectar.co.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FwebDev.d20cee9d.png&w=1080&q=75',
-                                height: 200,
-                                width: 500,
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
-                              child: Column(
-                                children: [
-                                  CircleAvatar(
-                                    backgroundColor: Colors.blue[100],
-                                    radius: 24,
-                                    child: Icon(Icons.code, size: 28, color: Colors.blue),
-                                  ),
-                                  SizedBox(height: 12),
-                                  Text(
-                                    "Web Development",
-                                    style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black87,
-                                    ),
-                                  ),
-                                  SizedBox(height: 8),
-                                  Text(
-                                    "Design responsive, visually appealing, and functional website that deliver an exceptional user experience.",
-                                  
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      color: Colors.black54,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
 
                       SizedBox(height: 30,),
 
-                      Container(
-                        width: 500,
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => Webdevelopment()));
+                        },
+                        child: Container(
+                          width: 500,
+                          
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(16),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 6,
+                                spreadRadius: 2,
+                                offset: Offset(0, 4),
+                              ),
+                            ],
+                          ),
                         
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(16),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 6,
-                              spreadRadius: 2,
-                              offset: Offset(0, 4),
-                            ),
-                          ],
-                        ),
-
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
-                               child: Image.network('https://novanectar.co.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FeComm.9ece6eb2.png&w=1080&q=75',
-                                height: 200,
-                                width: 500,
-                                fit: BoxFit.cover,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+                                 child: Image.network('https://novanectar.co.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FwebDev.d20cee9d.png&w=1080&q=75',
+                                  height: 200,
+                                  width: 500,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
-                              child: Column(
-                                children: [
-                                  CircleAvatar(
-                                    backgroundColor: Colors.blue[100],
-                                    radius: 24,
-                                    child: Icon(Icons.shopping_basket, size: 28, color: Colors.blue),
-                                  ),
-                                  SizedBox(height: 12),
-                                  Text(
-                                    "Ecommerce",
-                                    style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black87,
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+                                child: Column(
+                                  children: [
+                                    CircleAvatar(
+                                      backgroundColor: Colors.blue[100],
+                                      radius: 24,
+                                      child: Icon(Icons.code, size: 28, color: Colors.blue),
                                     ),
-                                  ),
-                                  SizedBox(height: 8),
-                                  Text(
-                                    "Develop robust e-commerce plateforms to boost your online presence and streamline your business operations.",
-                                  
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      color: Colors.black54,
+                                    SizedBox(height: 12),
+                                    Text(
+                                      "Web Development",
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black87,
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                    SizedBox(height: 8),
+                                    Text(
+                                      "Design responsive, visually appealing, and functional website that deliver an exceptional user experience.",
+                                    
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        color: Colors.black54,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
 
                       SizedBox(height: 30,),
-                      Container(
-                        width: 500,
-                        
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(16),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 6,
-                              spreadRadius: 2,
-                              offset: Offset(0, 4),
-                            ),
-                          ],
-                        ),
 
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
-                               child: Image.network('https://novanectar.co.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fseo.8fca23e4.png&w=1080&q=75',
-                                height: 200,
-                                width: 500,
-                                fit: BoxFit.cover,
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => Ecommerce()));
+                        },
+                        child: Container(
+                          width: 500,
+                          
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(16),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 6,
+                                spreadRadius: 2,
+                                offset: Offset(0, 4),
                               ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
-                              child: Column(
-                                children: [
-                                  CircleAvatar(
-                                    backgroundColor: Colors.blue[100],
-                                    radius: 24,
-                                    child: Icon(Icons.trending_up, size: 28, color: Colors.blue),
-                                  ),
-                                  SizedBox(height: 12),
-                                  Text(
-                                    "SEO",
-                                    style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black87,
-                                    ),
-                                  ),
-                                  SizedBox(height: 8),
-                                  Text(
-                                    "Optimize your online content to improve visibility, attract organic traffic, and enhance your search engine rankings.",
-                                  
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      color: Colors.black54,
-                                    ),
-                                  ),
-                                ],
+                            ],
+                          ),
+                        
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+                                 child: Image.network('https://novanectar.co.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FeComm.9ece6eb2.png&w=1080&q=75',
+                                  height: 200,
+                                  width: 500,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                            ),
-                          ],
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+                                child: Column(
+                                  children: [
+                                    CircleAvatar(
+                                      backgroundColor: Colors.blue[100],
+                                      radius: 24,
+                                      child: Icon(Icons.shopping_basket, size: 28, color: Colors.blue),
+                                    ),
+                                    SizedBox(height: 12),
+                                    Text(
+                                      "Ecommerce",
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black87,
+                                      ),
+                                    ),
+                                    SizedBox(height: 8),
+                                    Text(
+                                      "Develop robust e-commerce plateforms to boost your online presence and streamline your business operations.",
+                                    
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        color: Colors.black54,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+
+                      SizedBox(height: 30,),
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => SEO()));
+                        },
+                        child: Container(
+                          width: 500,
+                          
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(16),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 6,
+                                spreadRadius: 2,
+                                offset: Offset(0, 4),
+                              ),
+                            ],
+                          ),
+                        
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+                                 child: Image.network('https://novanectar.co.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fseo.8fca23e4.png&w=1080&q=75',
+                                  height: 200,
+                                  width: 500,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+                                child: Column(
+                                  children: [
+                                    CircleAvatar(
+                                      backgroundColor: Colors.blue[100],
+                                      radius: 24,
+                                      child: Icon(Icons.trending_up, size: 28, color: Colors.blue),
+                                    ),
+                                    SizedBox(height: 12),
+                                    Text(
+                                      "SEO",
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black87,
+                                      ),
+                                    ),
+                                    SizedBox(height: 8),
+                                    Text(
+                                      "Optimize your online content to improve visibility, attract organic traffic, and enhance your search engine rankings.",
+                                    
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        color: Colors.black54,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                       SizedBox(height: 30,),
-                                              Container(
-                        width: 500,
-                        
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(16),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 6,
-                              spreadRadius: 2,
-                              offset: Offset(0, 4),
-                            ),
-                          ],
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
-                               child: Image.network('https://novanectar.co.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FdigitalMarketing.69540bfd.png&w=1080&q=75',
-                                height: 200,
-                                width: 500,
-                                fit: BoxFit.cover,
+                     GestureDetector(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>Digitalmarketing()));
+                      },
+                       child: Container(
+                          width: 500,
+                          
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(16),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 6,
+                                spreadRadius: 2,
+                                offset: Offset(0, 4),
                               ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
-                              child: Column(
-                                children: [
-                                  CircleAvatar(
-                                    backgroundColor: Colors.blue[100],
-                                    radius: 24,
-                                    child: Icon(Icons.campaign, size: 28, color: Colors.blue),
-                                  ),
-                                  SizedBox(height: 12),
-                                  Text(
-                                    "Digital Marketing",
-                                    style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black87,
-                                    ),
-                                  ),
-                                  SizedBox(height: 8),
-                                  Text(
-                                    "Provide strategic and effective marketing campaigns to promote your brand and drive measurable growth.",
-                                  
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      color: Colors.black54,
-                                    ),
-                                  ),
-                                ],
+                            ],
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+                                 child: Image.network('https://novanectar.co.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FdigitalMarketing.69540bfd.png&w=1080&q=75',
+                                  height: 200,
+                                  width: 500,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                            ),
-                          ],
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+                                child: Column(
+                                  children: [
+                                    CircleAvatar(
+                                      backgroundColor: Colors.blue[100],
+                                      radius: 24,
+                                      child: Icon(Icons.campaign, size: 28, color: Colors.blue),
+                                    ),
+                                    SizedBox(height: 12),
+                                    Text(
+                                      "Digital Marketing",
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black87,
+                                      ),
+                                    ),
+                                    SizedBox(height: 8),
+                                    Text(
+                                      "Provide strategic and effective marketing campaigns to promote your brand and drive measurable growth.",
+                                    
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        color: Colors.black54,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
+                     ),
                       ],
                     )
                   ),
