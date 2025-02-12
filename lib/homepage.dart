@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task2/Other/drawer.dart';
 import 'package:task2/pages/appdevelopment.dart';
 import 'package:task2/pages/digitalmarketing.dart';
 import 'package:task2/pages/ecommerce.dart';
@@ -17,6 +18,7 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: DrawerOp(),
       backgroundColor: Colors.white,
       appBar: AppBar( backgroundColor: Colors.white,
         elevation: 2,
