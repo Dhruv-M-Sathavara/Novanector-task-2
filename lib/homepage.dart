@@ -5,18 +5,119 @@ import 'package:task2/Other/drawer.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
-
+  
   @override
   State<Homepage> createState() => _HomepageState();
 }
 
 class _HomepageState extends State<Homepage> {
+  
     final List<String> imageList = [
     'https://ebz-static.s3.ap-south-1.amazonaws.com/easebuzz-static/online-courses.png',
     'https://blogimage.vantagecircle.com/content/images/2022/09/Employee-Development.png',
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzZL5NeR9HnX3WZsVMV2EtM4oKH5gekcONOQ&s',
     'https://akm-img-a-in.tosshub.com/indiatoday/images/story/201810/stockvault-person-studying-and-learning---knowledge-concept178241_0.jpeg',
   ];
+  final _formKey = GlobalKey<FormState>();
+  String? _selectedQuery;
+  TextEditingController name = TextEditingController();
+  TextEditingController email = TextEditingController();
+  TextEditingController phone = TextEditingController();
+  TextEditingController description = TextEditingController();
+
+  void _showFormDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text("Submit Query"),
+          content: SingleChildScrollView(
+            child: Form(
+              key: _formKey,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  TextFormField(
+                    controller: name,
+                    decoration: InputDecoration(labelText: "Name"),
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return "Please enter your name";
+                      }
+                      return null;
+                    },
+                  ),
+                  TextFormField(
+                    controller: email,
+                    decoration: InputDecoration(labelText: "Email ID"),
+                    keyboardType: TextInputType.emailAddress,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return "Please enter your email";
+                      }
+                      return null;
+                    },
+                  ),
+                  TextFormField(
+                    controller: phone,
+                    decoration: InputDecoration(labelText: "Phone Number"),
+                    keyboardType: TextInputType.phone,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return "Please enter your phone number";
+                      }
+                      return null;
+                    },
+                  ),
+                  DropdownButtonFormField<String>(
+                    decoration: InputDecoration(labelText: "Query Type"),
+                    value: _selectedQuery,
+                    items: ["Project", "Internship", "Course"]
+                        .map((query) => DropdownMenuItem(
+                              value: query,
+                              child: Text(query),
+                            ))
+                        .toList(),
+                    onChanged: (value) {
+                      setState(() {
+                        _selectedQuery = value;
+                      });
+                    },
+                    validator: (value) => value == null ? "Please select a query type" : null,
+                  ),
+                  TextFormField(
+                    controller: description,
+                    decoration: InputDecoration(labelText: "Description"),
+                    maxLines: 3,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text("Cancel"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                if (_formKey.currentState!.validate()) {
+                  // Process the form submission
+                  Navigator.pop(context);
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text("Form submitted successfully!")),
+                  );
+                }
+              },
+              child: Text("Submit"),
+            ),
+          ],
+        );
+      },
+    );
+  }
   @override
   
   Widget build(BuildContext context) {
@@ -235,7 +336,7 @@ class _HomepageState extends State<Homepage> {
                     children: [
                       
                       Container(
-                        padding: EdgeInsets.symmetric(vertical: 60,horizontal: 120),
+                        padding: EdgeInsets.symmetric(vertical: 20,horizontal: 120),
                         child: Text('Projects' , style: TextStyle(decoration: TextDecoration.underline, fontSize: 30,decorationColor: const Color.fromARGB(255, 8, 5, 39),  color: const Color.fromARGB(255, 8, 5, 39), fontWeight: FontWeight.bold),),
                         
                       ),
@@ -417,6 +518,12 @@ class _HomepageState extends State<Homepage> {
           ),
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => _showFormDialog(context),
+        child: Icon(Icons.book),
+        backgroundColor: Colors.blue.shade100,
+      ),
+    
     );
   }
 }
