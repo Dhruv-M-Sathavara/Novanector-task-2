@@ -1,4 +1,8 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:task2/Other/aboutus.dart';
+import 'package:task2/Other/services.dart';
 import 'package:task2/homepage.dart';
 import 'package:task2/pages/appdevelopment.dart';
 import 'package:task2/pages/digitalmarketing.dart';
@@ -71,8 +75,8 @@ class DrawerOp extends StatelessWidget {
             Navigator.push(context, MaterialPageRoute(builder: (context) => Internship()));
           }),
           
-          iteam(title: 'Career', onTap: () {}),
-          iteam(title: 'Our Services', onTap: () {}),
+          iteam(title: 'About us', onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Aboutus()));}),
+          iteam(title: 'Cources', onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Cources()));}),
         ],
       ),
     );

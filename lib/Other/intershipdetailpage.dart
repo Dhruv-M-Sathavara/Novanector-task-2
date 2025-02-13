@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task2/Other/forCourceEnquiry.dart';
 
 class Intershipdetailpage extends StatelessWidget {
   @override
@@ -56,7 +57,7 @@ class Intershipdetailpage extends StatelessWidget {
                   SizedBox(height: 15),
                   Center(
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>Enquiry()));},
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue,
                         shape: RoundedRectangleBorder(
@@ -123,13 +124,13 @@ class Intershipdetailpage extends StatelessWidget {
                   ),
                   SizedBox(height: 8),
                   Text(
-                    "Contribute to software projects, optimizing code.",
+                    " Contribute to software projects, optimizing code efficiency and performance, enhancing programming skills and understanding software architecture in real-world applications.",
                     style: TextStyle(fontSize: 14, color: Colors.black87),
                   ),
                   SizedBox(height: 15),
                   Center(
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>Enquiry()));},
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue,
                         shape: RoundedRectangleBorder(
@@ -196,13 +197,13 @@ class Intershipdetailpage extends StatelessWidget {
                   ),
                   SizedBox(height: 8),
                   Text(
-                    "Contribute to software projects, optimizing code.",
+                    "Execute creative projects, translating concepts into compelling visuals, creating materials, refining design skills and adapting to client requirements for impactful communication.",
                     style: TextStyle(fontSize: 14, color: Colors.black87),
                   ),
                   SizedBox(height: 15),
                   Center(
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>Enquiry()));},
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue,
                         shape: RoundedRectangleBorder(
@@ -269,13 +270,13 @@ class Intershipdetailpage extends StatelessWidget {
                   ),
                   SizedBox(height: 8),
                   Text(
-                    "Contribute to software projects, optimizing code.",
+                    "Novanectar's Data Analytics course. Extract insights from data with statistics, machine learning and visualization techniques.",
                     style: TextStyle(fontSize: 14, color: Colors.black87),
                   ),
                   SizedBox(height: 15),
                   Center(
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>Enquiry()));},
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue,
                         shape: RoundedRectangleBorder(
@@ -342,13 +343,13 @@ class Intershipdetailpage extends StatelessWidget {
                   ),
                   SizedBox(height: 8),
                   Text(
-                    "Contribute to software projects, optimizing code.",
+                    "Develop functional websites for clients, utilizing modern web technologies and frameworks, refining coding skills and implementing responsive design principles.",
                     style: TextStyle(fontSize: 14, color: Colors.black87),
                   ),
                   SizedBox(height: 15),
                   Center(
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>Enquiry()));},
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue,
                         shape: RoundedRectangleBorder(
@@ -415,13 +416,13 @@ class Intershipdetailpage extends StatelessWidget {
                   ),
                   SizedBox(height: 8),
                   Text(
-                    "Contribute to software projects, optimizing code.",
+                    "Solve real-world problems using AI techniques, designing and implementing intelligent systems. Gain expertise in AI applications.",
                     style: TextStyle(fontSize: 14, color: Colors.black87),
                   ),
                   SizedBox(height: 15),
                   Center(
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>Enquiry()));},
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue,
                         shape: RoundedRectangleBorder(
@@ -488,13 +489,13 @@ class Intershipdetailpage extends StatelessWidget {
                   ),
                   SizedBox(height: 8),
                   Text(
-                    "Contribute to software projects, optimizing code.",
+                    "Apply algorithms to real datasets, solving complex problems and refining predictive models, fostering critical thinking and practical experience in data analysis and model deployment.",
                     style: TextStyle(fontSize: 14, color: Colors.black87),
                   ),
                   SizedBox(height: 15),
                   Center(
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>Enquiry()));},
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue,
                         shape: RoundedRectangleBorder(
@@ -561,13 +562,13 @@ class Intershipdetailpage extends StatelessWidget {
                   ),
                   SizedBox(height: 8),
                   Text(
-                    "Contribute to software projects, optimizing code.",
+                    "Contribute to live Java projects, developing scalable softwaresolutions and integrating frameworks, enhancing coding proficiency and understanding software development lifecycle",
                     style: TextStyle(fontSize: 14, color: Colors.black87),
                   ),
                   SizedBox(height: 15),
                   Center(
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>Enquiry()));},
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue,
                         shape: RoundedRectangleBorder(
@@ -634,13 +635,13 @@ class Intershipdetailpage extends StatelessWidget {
                   ),
                   SizedBox(height: 8),
                   Text(
-                    "Contribute to software projects, optimizing code.",
+                    "Tackle live app projects, utilizing iOS and Android frameworks to develop functional mobile applications, fostering adaptability and proficiency in modern development tools.",
                     style: TextStyle(fontSize: 14, color: Colors.black87),
                   ),
                   SizedBox(height: 15),
                   Center(
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>Enquiry()));},
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue,
                         shape: RoundedRectangleBorder(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task2/Other/intershipdetailpage.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Internship extends StatefulWidget {
   const Internship({super.key});
@@ -9,6 +10,8 @@ class Internship extends StatefulWidget {
 }
 
 class _InternshipState extends State<Internship> {
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -160,7 +163,10 @@ class _InternshipState extends State<Internship> {
             ),
             SizedBox(height: 15),
             ElevatedButton(
-              onPressed: () {}, 
+              onPressed: () {
+                const url = "https://wa.me/?text=Hey buddy, try this super cool app!";
+                
+              }, 
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
                 side: BorderSide(color: Colors.blue),
