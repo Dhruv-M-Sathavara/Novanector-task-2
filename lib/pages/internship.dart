@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task2/Other/intershipdetailpage.dart';
-import 'package:url_launcher/url_launcher.dart';
+
 
 class Internship extends StatefulWidget {
   const Internship({super.key});
@@ -164,7 +164,6 @@ class _InternshipState extends State<Internship> {
             SizedBox(height: 15),
             ElevatedButton(
               onPressed: () {
-                const url = "https://wa.me/?text=Hey buddy, try this super cool app!";
                 
               }, 
               style: ElevatedButton.styleFrom(

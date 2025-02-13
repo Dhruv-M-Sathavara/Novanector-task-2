@@ -1,11 +1,7 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:task2/Other/drawer.dart';
-import 'package:task2/pages/appdevelopment.dart';
-import 'package:task2/pages/digitalmarketing.dart';
-import 'package:task2/pages/ecommerce.dart';
-import 'package:task2/pages/graphic.dart';
-import 'package:task2/pages/seo.dart';
-import 'package:task2/pages/webdevelopment.dart';
+
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -15,7 +11,14 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
+    final List<String> imageList = [
+    'https://ebz-static.s3.ap-south-1.amazonaws.com/easebuzz-static/online-courses.png',
+    'https://blogimage.vantagecircle.com/content/images/2022/09/Employee-Development.png',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzZL5NeR9HnX3WZsVMV2EtM4oKH5gekcONOQ&s',
+    'https://akm-img-a-in.tosshub.com/indiatoday/images/story/201810/stockvault-person-studying-and-learning---knowledge-concept178241_0.jpeg',
+  ];
   @override
+  
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: DrawerOp(),
@@ -33,7 +36,32 @@ class _HomepageState extends State<Homepage> {
             mainAxisAlignment: MainAxisAlignment.start,
             // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-                Container(
+                SizedBox(height: 20,),
+                   CarouselSlider(
+                        options: CarouselOptions(
+                          height: 200.0,
+                          autoPlay: true,
+                          // enlargeCenterPage: true,
+                        ),
+                        items: imageList.map((imageUrl) {
+                          return Builder(
+                            builder: (BuildContext context) {
+                              return Container(
+                                width: MediaQuery.of(context).size.width,
+                                margin: EdgeInsets.symmetric(horizontal: 5.0),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  image: DecorationImage(
+                                    image: NetworkImage(imageUrl),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              );
+                            },
+                          );
+                        }).toList(),
+                      ),
+                  Container(
                   padding: EdgeInsets.symmetric(vertical: 40),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -191,19 +219,6 @@ class _HomepageState extends State<Homepage> {
                     ],
                   ),  
                   SizedBox(height: 30,),
-
-
-                  Container(
-                    height: 500,
-                    width: double.infinity,
-                    color: const Color.fromARGB(255, 8, 5, 39),
-                  
-                    
-                  child: Container(
-                    padding: EdgeInsets.symmetric(vertical: 50,horizontal: 120),
-                    child: Text('Process' , style: TextStyle(decoration: TextDecoration.underline, fontSize: 30,decorationColor: Colors.white, color: Colors.white, fontWeight: FontWeight.bold),)),
-                  ),
-    
 
                   ///Here space for sliider
                   
