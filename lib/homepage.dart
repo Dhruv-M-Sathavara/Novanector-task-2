@@ -104,7 +104,7 @@ class _HomepageState extends State<Homepage> {
             ElevatedButton(
               onPressed: () {
                 if (_formKey.currentState!.validate()) {
-                  // Process the form submission
+                  
                   Navigator.pop(context);
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(content: Text("Form submitted successfully!")),
@@ -249,7 +249,7 @@ class _HomepageState extends State<Homepage> {
         
                   SizedBox(height: 30,),
                   
-                            Container(
+            Container(
               alignment: Alignment.center,
               padding: EdgeInsets.symmetric(horizontal: 5),
               child: RichText(
